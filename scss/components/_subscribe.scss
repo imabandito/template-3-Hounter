@@ -1,0 +1,52 @@
+.subscribe {
+  @include section-settings;
+  margin-top: 120px;
+
+  &__container {
+    background: url("../images/subscribe/bg_full.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    padding: 65px 0px;
+  }
+
+  &__content {
+    width: 496px;
+  }
+
+  &__title {
+    @include font-semibold-bigger;
+    line-height: 48px;
+    text-align: center;
+    text-transform: capitalize;
+    color: $color-blue-dark;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .subscribe {
+    &__container {
+      padding: 20px;
+    }
+    &__title {
+      font-size: 26px;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .subscribe {
+    &__title {
+      font-size: 13px;
+      line-height: 33px;
+    }
+
+    &__button {
+      // padding: 12px 7px;
+      font-size: 12px;
+    }
+  }
+}

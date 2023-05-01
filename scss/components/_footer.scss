@@ -1,0 +1,94 @@
+.footer {
+  padding: 20px;
+  margin: 71px 0px 93px;
+  @include section-settings;
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    bottom: -93px;
+    right: 0;
+    background: url("../images/footer/gradient.png");
+    background-size: contain;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    height: 200%;
+    width: 740px;
+    z-index: -1;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__about {
+    max-width: 320px;
+  }
+
+  &__descr {
+    margin-top: 16px;
+    @include font-regular-mid;
+    color: $color-blue-lite;
+
+    opacity: 0.75;
+  }
+
+  &__socials {
+    display: flex;
+    margin-top: 24px;
+    gap: 24px;
+  }
+
+  &__links {
+    display: flex;
+    gap: 84px;
+
+    &__col {
+      h4 {
+        margin-bottom: 6px;
+        @include font-semibold-normal;
+        text-transform: capitalize;
+        color: $color-obsidian;
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    a:hover {
+      color: $color-obsidian;
+    }
+  }
+
+  &__link {
+    @include font-regular-mid;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: $color-grey;
+    transition: 0.4s;
+
+    &:hover {
+      color: $color-obsidian;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    &__links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

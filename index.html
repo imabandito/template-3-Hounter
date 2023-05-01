@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./images/icons/logo.svg"
+      type="image/x-icon"
+    />
+    <title>Hounter</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a class="header__logo" href="">
+          <img
+            class="header__logo__icon"
+            src="./images/icons/logo.svg"
+            alt="logo"
+          />
+          <h4 class="header__title">Hounter</h4>
+        </a>
+        <nav class="nav">
+          <div class="nav__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="nav__links">
+            <a href="" class="nav__link">About Us</a>
+            <a href="" class="nav__link">Article</a>
+            <a href="" class="nav__link nav__isextendible"
+              >Property
+              <div class="nav__extendible">
+                <ul>
+                  <li>Menu 1</li>
+                  <li>Menu 2</li>
+                  <li>Menu 3</li>
+                </ul>
+              </div>
+            </a>
+            <a href="" class="nav__sign__up">Sign Up!</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="hero">
+        <div class="hero__gradient"></div>
+        <div class="container hero__container">
+          <div class="hero__info">
+            <h1 class="hero__title">
+              find the place <br />
+              to live <span>your dreams</span><br />
+              easily here
+            </h1>
+            <p class="hero__descr">
+              Everything you need about finding your place to live will be here,
+              where it will be easier for you
+            </p>
+            <div class="input-search-wrapper">
+              <img
+                src="./images/icons/location.svg"
+                alt="location"
+                class="input-search__location"
+              />
+              <input
+                type="text"
+                name="search"
+                id="search"
+                class="input-search hero__search"
+                placeholder="Search for the location you want!"
+              />
+              <button class="input-search__button">Search</button>
+            </div>
+            <div class="hero__partnership">
+              <h6 class="hero__partnership__title">Our Partnership</h6>
+              <div class="hero__partners">
+                <a href="" class="hero__partner"
+                  ><img src="./images/hero/traveloka.png" alt="traveloka"
+                /></a>
+                <a href="" class="hero__partner"
+                  ><img src="./images/hero/tiket_com.png" alt="tiket.com"
+                /></a>
+                <a href="" class="hero__partner"
+                  ><img src="./images/hero/airbnb.png" alt="airbnb"
+                /></a>
+                <a href="" class="hero__partner"
+                  ><img src="./images/hero/tripadvisor.png" alt="tripadvisor"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__stats__wrapper">
+          <div class="hero__slider">
+            <div class="hero__stats">
+              <div class="stat-block">
+                <div class="stat-block__photos">
+                  <img src="./images/hero/group-1-1.png" alt="people" />
+                  <img src="./images/hero/group-1-2.png" alt="people" />
+                  <img src="./images/hero/group-1-3.png" alt="people" />
+                </div>
+                <div class="stat-block__descr">
+                  <h5>1K+ People</h5>
+                  <p>Successfully Getting Home</p>
+                </div>
+              </div>
+
+              <div class="stat-block">
+                <img src="./images/hero/house-icon.png" alt="house" />
+                <div class="stat-block__descr">
+                  <h5>56 Houses</h5>
+                  <p>Sold Monthly</p>
+                </div>
+              </div>
+
+              <div class="stat-block">
+                <img src="./images/hero/girl.png" alt="girl" />
+                <div class="stat-block__descr">
+                  <h5>4K+</h5>
+                  <p>People Looking for New Homes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured">
+        <div class="container featured__container">
+          <header class="featured__header">
+            <div class="section-title">
+              <h6>Our Recommendation</h6>
+              <h2>Featured House</h2>
+            </div>
+            <div class="featured__house__types">
+              <button class="featured__house__type house__btn">
+                <svg
+                  width="18"
+                  height="19"
+                  viewBox="0 0 18 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18.0001 8.83189V17.5C17.9999 17.7719 17.9263 18.0386 17.7869 18.272C17.6475 18.5054 17.4477 18.6968 17.2085 18.8259C16.9917 18.9432 16.7486 19.0031 16.5022 18.9999H11.9968C11.7979 18.9999 11.6071 18.9209 11.4665 18.7803C11.3258 18.6396 11.2468 18.4488 11.2468 18.2499V13.7493C11.2468 13.5504 11.1678 13.3596 11.0271 13.2189C10.8865 13.0783 10.6957 12.9993 10.4968 12.9993H7.49682C7.29791 12.9993 7.10714 13.0783 6.96649 13.2189C6.82584 13.3596 6.74682 13.5504 6.74682 13.7493V18.2499C6.74682 18.4488 6.6678 18.6396 6.52715 18.7803C6.3865 18.9209 6.19573 18.9999 5.99682 18.9999H1.50029C1.28764 19.0005 1.07732 18.9556 0.883446 18.8682C0.689567 18.7808 0.516599 18.653 0.376132 18.4934C0.129551 18.2082 -0.00419596 17.8427 0.000100382 17.4657V8.8318C0.000263818 8.62281 0.0440112 8.41615 0.128549 8.22503C0.213086 8.0339 0.336555 7.86251 0.491069 7.7218L7.99041 0.903078C8.26588 0.650753 8.62589 0.510777 8.99945 0.510742C9.37302 0.510707 9.73305 0.650617 10.0086 0.90289L17.5092 7.72189C17.6637 7.86263 17.7871 8.03403 17.8717 8.22515C17.9562 8.41627 17.9999 8.62292 18.0001 8.83189Z"
+                    fill="#10B981"
+                  />
+                </svg>
+                House
+              </button>
+              <button class="featured__house__type house__villa__btn">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 18.0002H1C0.45 18.0002 0 17.5502 0 17.0002V5.69018C0 5.27018 0.25 4.90018 0.64 4.75018L11.64 0.520183C11.7921 0.461504 11.9561 0.440881 12.118 0.460108C12.2798 0.479334 12.4345 0.537829 12.5686 0.630498C12.7027 0.723167 12.8121 0.847203 12.8873 0.991808C12.9624 1.13641 13.0012 1.2972 13 1.46018V7.00018H5C4.45 7.00018 4 7.45018 4 8.00018V18.0002ZM14 9.00018H7C6.45 9.00018 6 9.45018 6 10.0002V17.0002C6 17.5502 6.45 18.0002 7 18.0002H11V14.0002C11 13.4502 11.45 13.0002 12 13.0002C12.55 13.0002 13 13.4502 13 14.0002V18.0002H17C17.55 18.0002 18 17.5502 18 17.0002V9.00018C18 7.90018 17.1 7.00018 16 7.00018C14.9 7.00018 14 7.90018 14 9.00018Z"
+                    fill="#888B97"
+                  />
+                </svg>
+
+                Villa
+              </button>
+              <button class="featured__house__type house__apartment__btn">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14 8V2C14 0.9 13.1 0 12 0H6C4.9 0 4 0.9 4 2V4H2C0.9 4 0 4.9 0 6V16C0 17.1 0.9 18 2 18H8V14H10V18H16C17.1 18 18 17.1 18 16V10C18 8.9 17.1 8 16 8H14ZM4 16H2V14H4V16ZM4 12H2V10H4V12ZM4 8H2V6H4V8ZM8 12H6V10H8V12ZM8 8H6V6H8V8ZM8 4H6V2H8V4ZM12 12H10V10H12V12ZM12 8H10V6H12V8ZM12 4H10V2H12V4ZM16 16H14V14H16V16ZM16 12H14V10H16V12Z"
+                    fill="#888B97"
+                  />
+                </svg>
+
+                Apartment
+              </button>
+
+              <button class="featured__house__type house__all__btn">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14 8V2C14 0.9 13.1 0 12 0H6C4.9 0 4 0.9 4 2V4H2C0.9 4 0 4.9 0 6V16C0 17.1 0.9 18 2 18H8V14H10V18H16C17.1 18 18 17.1 18 16V10C18 8.9 17.1 8 16 8H14ZM4 16H2V14H4V16ZM4 12H2V10H4V12ZM4 8H2V6H4V8ZM8 12H6V10H8V12ZM8 8H6V6H8V8ZM8 4H6V2H8V4ZM12 12H10V10H12V12ZM12 8H10V6H12V8ZM12 4H10V2H12V4ZM16 16H14V14H16V16ZM16 12H14V10H16V12Z"
+                    fill="#888B97"
+                  />
+                </svg>
+
+                All
+              </button>
+            </div>
+            <div class="featured__controls">
+              <button class="featured__forward">
+                <svg
+                  width="11"
+                  height="6"
+                  viewBox="0 0 11 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.6236 1.12001C10.624 0.946246 10.5631 0.777845 10.4515 0.644043C10.3887 0.568737 10.3116 0.506487 10.2245 0.460859C10.1374 0.415232 10.0421 0.387122 9.94413 0.378141C9.84612 0.369161 9.74728 0.379485 9.65329 0.408522C9.5593 0.43756 9.47199 0.48474 9.39637 0.547361L5.38526 3.87916L1.36668 0.666354C1.29013 0.604578 1.20205 0.558444 1.10751 0.530606C1.01296 0.502768 0.913813 0.493774 0.81576 0.50414C0.717706 0.514507 0.62268 0.54403 0.536144 0.591013C0.449609 0.637995 0.373269 0.701511 0.311514 0.77791C0.243388 0.854858 0.192001 0.94497 0.160579 1.04259C0.129157 1.14021 0.118378 1.24323 0.128919 1.34519C0.139459 1.44715 0.171091 1.54584 0.22183 1.63507C0.272569 1.7243 0.341319 1.80215 0.423766 1.86372L4.91381 5.45582C5.04771 5.5652 5.21567 5.625 5.38901 5.625C5.56234 5.625 5.7303 5.5652 5.8642 5.45582L10.3542 1.73729C10.4448 1.66268 10.5164 1.56791 10.5632 1.46066C10.61 1.35341 10.6307 1.23671 10.6236 1.12001Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+              <button class="featured__backward">
+                <svg
+                  width="11"
+                  height="6"
+                  viewBox="0 0 11 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.6236 1.12001C10.624 0.946246 10.5631 0.777845 10.4515 0.644043C10.3887 0.568737 10.3116 0.506487 10.2245 0.460859C10.1374 0.415232 10.0421 0.387122 9.94413 0.378141C9.84612 0.369161 9.74728 0.379485 9.65329 0.408522C9.5593 0.43756 9.47199 0.48474 9.39637 0.547361L5.38526 3.87916L1.36668 0.666354C1.29013 0.604578 1.20205 0.558444 1.10751 0.530606C1.01296 0.502768 0.913813 0.493774 0.81576 0.50414C0.717706 0.514507 0.62268 0.54403 0.536144 0.591013C0.449609 0.637995 0.373269 0.701511 0.311514 0.77791C0.243388 0.854858 0.192001 0.94497 0.160579 1.04259C0.129157 1.14021 0.118378 1.24323 0.128919 1.34519C0.139459 1.44715 0.171091 1.54584 0.22183 1.63507C0.272569 1.7243 0.341319 1.80215 0.423766 1.86372L4.91381 5.45582C5.04771 5.5652 5.21567 5.625 5.38901 5.625C5.56234 5.625 5.7303 5.5652 5.8642 5.45582L10.3542 1.73729C10.4448 1.66268 10.5164 1.56791 10.5632 1.46066C10.61 1.35341 10.6307 1.23671 10.6236 1.12001Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+          </header>
+
+          <div class="featured__slider">
+            <div class="featured__houses"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tour">
+        <div class="tour__bg"></div>
+        <div class="container tour__container">
+          <div class="tour__col">
+            <div class="section-title">
+              <h6>Ready to Sell!</h6>
+              <h2>Let’s tour and see our house!</h2>
+            </div>
+            <div class="tour__info">
+              <p class="tour__descr">
+                Houses recommended by our partners that have been curated to
+                become the home of your dreams!
+              </p>
+
+              <h6 class="tour__details__title">House Detail</h6>
+              <div class="tour__details">
+                <div class="tour__detail">
+                  <img
+                    class="tour__detail__icon"
+                    src="./images/tour/bedroom.svg"
+                    alt="bedroom"
+                  />
+                  <p class="tour__detail__title">4 Bedrooms</p>
+                </div>
+                <div class="tour__detail">
+                  <img
+                    class="tour__detail__icon"
+                    src="./images/tour/bathroom.svg"
+                    alt="bedroom"
+                  />
+                  <p class="tour__detail__title">2 Bathrooms</p>
+                </div>
+                <div class="tour__detail">
+                  <img
+                    class="tour__detail__icon"
+                    src="./images/tour/carport.svg"
+                    alt="bedroom"
+                  />
+                  <p class="tour__detail__title">1 Carport</p>
+                </div>
+                <div class="tour__detail">
+                  <img
+                    class="tour__detail__icon"
+                    src="./images/tour/floor.svg"
+                    alt="bedroom"
+                  />
+                  <p class="tour__detail__title">2 Floors</p>
+                </div>
+              </div>
+
+              <div class="tour__contact user-info">
+                <img
+                  src="./images/tour/face.png"
+                  alt=""
+                  class="tour__contact__img user-info__img"
+                />
+                <div class="tour__contact__info user-info__credentials">
+                  <h6 class="tour__contact__name user-info__name">
+                    Dianne Russell
+                  </h6>
+                  <p class="tour__contact__position user-info__position">
+                    Manager Director
+                  </p>
+                </div>
+                <a href="tel:380987654321" class="tour__contact__phone">
+                  <svg
+                    width="16"
+                    height="20"
+                    viewBox="0 0 16 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.38443 0.479124C4.90952 0.320805 5.47301 0.347107 5.98107 0.553653C6.48914 0.760198 6.91114 1.13453 7.17683 1.61432L7.26683 1.79312L8.06003 3.55832C8.30112 4.09411 8.37937 4.68894 8.28507 5.26885C8.19077 5.84876 7.92806 6.38814 7.52962 6.81992L7.37122 6.97832L6.11843 8.14592C5.89283 8.35952 6.06203 9.18633 6.87923 10.5999C7.61243 11.8719 8.21123 12.4659 8.50403 12.4983H8.55563L8.61922 12.4863L11.0792 11.7339C11.4098 11.6325 11.7627 11.6285 12.0955 11.7224C12.4283 11.8162 12.7271 12.004 12.956 12.2631L13.0664 12.4011L14.6936 14.6571C15.0129 15.0992 15.1722 15.6368 15.1451 16.1814C15.1181 16.7261 14.9064 17.2453 14.5448 17.6535L14.3984 17.8047L13.7468 18.4215C13.1628 18.9746 12.4322 19.3484 11.6419 19.4984C10.8516 19.6483 10.0349 19.5682 9.28883 19.2675C6.96683 18.3315 4.85723 16.1931 2.94083 12.8739C1.02083 9.54633 0.222826 6.64592 0.579226 4.16192C0.687179 3.41091 0.996558 2.70316 1.47449 2.11388C1.95243 1.52459 2.58107 1.07578 3.29363 0.815124L3.52523 0.738324L4.38443 0.479124Z"
+                      fill="white"
+                    />
+                  </svg>
+
+                  Contact Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="tour__media">
+            <img
+              src="./images/tour/house.png"
+              alt="house"
+              class="tour__video"
+            />
+            <div class="tour__media__bottom">
+              <div class="tour__media__wrapper">
+                <img
+                  src="./images/tour/couch_green.png"
+                  alt="green couch"
+                  class="tour__img"
+                />
+              </div>
+              <div class="tour__media__wrapper">
+                <img
+                  src="./images/tour/wheat.png"
+                  alt="wheat"
+                  class="tour__img"
+                />
+              </div>
+
+              <div class="tour__media__wrapper">
+                <img
+                  src="./images/tour/couch_orange.png"
+                  alt="orange couch"
+                  class="tour__img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="container reviews__container">
+          <div class="section-title reviews__title">
+            <h6>See Our Review</h6>
+            <h2>What Our User Say About Us</h2>
+          </div>
+
+          <div class="slider reviews__slides">
+            <div class="slides">
+              <div id="slides__1" class="slide">
+                <img
+                  src="./images/reviews/house1.png"
+                  alt="house"
+                  class="slide__img"
+                />
+                <div class="slide__review">
+                  <h2 class="slide__title">
+                    Best! I got the house I wanted through Hounter
+                  </h2>
+                  <p class="slide__descr">
+                    Through this website I can get a house with the type and
+                    specifications I want very easily, without a complicated
+                    process to be able to find information on the house we want.
+                  </p>
+
+                  <div class="user-info slides__user__info">
+                    <div class="user-info__col">
+                      <img
+                        src="./images/tour/face.png"
+                        alt=""
+                        class="user-info__img"
+                      />
+                      <div class="user-info__credentials">
+                        <h6 class="user-info__name">Dianne Russell</h6>
+                        <p class="user-info__position">Manager Director</p>
+                      </div>
+                    </div>
+                    <div class="user-info__col user-info__rating">
+                      <img
+                        src="./images/reviews/star.svg"
+                        alt="star"
+                        class="user-info__star"
+                      />
+                      <span class="user-star__rating__number">4.6</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="slides__2" class="slide">
+                <img
+                  src="./images/reviews/house3.png"
+                  alt="house"
+                  class="slide__img"
+                />
+                <div class="slide__review">
+                  <h2 class="slide__title">My house sold out fast!</h2>
+                  <p class="slide__descr">
+                    I was finally able to sell my house quickly through Hounter
+                    by immediately setting me up with people who wanted my
+                    house. I also do not get a discount from the sale of my
+                    house. Awesome!
+                  </p>
+
+                  <div class="user-info slides__user__info">
+                    <div class="user-info__col">
+                      <img
+                        src="./images/tour/face.png"
+                        alt=""
+                        class="user-info__img"
+                      />
+                      <div class="user-info__credentials">
+                        <h6 class="user-info__name">Courtney Henry</h6>
+                        <p class="user-info__position">CEO Andarafish</p>
+                      </div>
+                    </div>
+                    <div class="user-info__col user-info__rating">
+                      <img
+                        src="./images/reviews/star.svg"
+                        alt="star"
+                        class="user-info__star"
+                      />
+                      <span class="user-star__rating__number">4.3</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="slides__3" class="slide">
+                <img
+                  src="./images/reviews/house2.png"
+                  alt="house"
+                  class="slide__img"
+                />
+                <div class="slide__review">
+                  <h2 class="slide__title">
+                    Through the Hounter, I can get a house for my self
+                  </h2>
+                  <p class="slide__descr">
+                    By looking for information about what kind of house we want,
+                    we managed to get the house we wanted very quickly, and
+                    directly connected with the seller to be able to ask about
+                    the details, very helpful!
+                  </p>
+
+                  <div class="user-info slides__user__info">
+                    <div class="user-info__col">
+                      <img
+                        src="./images/tour/face.png"
+                        alt=""
+                        class="user-info__img"
+                      />
+                      <div class="user-info__credentials">
+                        <h6 class="user-info__name">Esther Howard</h6>
+                        <p class="user-info__position">Head of Marketing</p>
+                      </div>
+                    </div>
+                    <div class="user-info__col user-info__rating">
+                      <img
+                        src="./images/reviews/star.svg"
+                        alt="star"
+                        class="user-info__star"
+                      />
+                      <span class="user-star__rating__number">4.6</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reviews__anchors">
+              <a href="#slides__1"></a>
+              <a href="#slides__2"></a>
+              <a href="#slides__3"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tips">
+        <div class="tips__bg"></div>
+        <div class="container tips__container">
+          <div class="section-title reviews__title">
+            <h6>See tips and trick from our partnership</h6>
+            <h2>Find out more about selling and buying homes</h2>
+          </div>
+          <a href="" class="tips__more">More Articles</a>
+          <div class="tips__articles">
+            <div class="article">
+              <img
+                src="./images/tips/tip1.png"
+                alt="apartment"
+                class="article__img"
+              />
+              <div class="article__content">
+                <div class="article__author">
+                  <img
+                    src="./images/tips/person1.png"
+                    alt="person"
+                    class="article__author__img"
+                  />
+                  <span class="article__author__name">Dianne Russell</span>
+                </div>
+                <h3 class="article__title">
+                  The things we need to check when we want to buy a house
+                </h3>
+                <div class="article__time">
+                  <img
+                    src="./images/tips/clock.svg"
+                    alt="clock"
+                    class="article__time__icon"
+                  />
+                  <span class="article__time__details"
+                    >4 min read | 25 Apr 2021</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="article">
+              <img
+                src="./images/tips/tip2.png"
+                alt="apartment"
+                class="article__img"
+              />
+              <div class="article__content">
+                <div class="article__author">
+                  <img
+                    src="./images/tips/person2.png"
+                    alt="person"
+                    class="article__author__img"
+                  />
+                  <span class="article__author__name">Courtney Henry</span>
+                </div>
+                <h3 class="article__title">
+                  7 Ways to distinguish the quality of the house we want to buy
+                </h3>
+                <div class="article__time">
+                  <img
+                    src="./images/tips/clock.svg"
+                    alt="clock"
+                    class="article__time__icon"
+                  />
+                  <span class="article__time__details"
+                    >6 min read | 24 Apr 2021</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="article">
+              <img
+                src="./images/tips/tip3.png"
+                alt="apartment"
+                class="article__img"
+              />
+              <div class="article__content">
+                <div class="article__author">
+                  <img
+                    src="./images/tips/person3.png"
+                    alt="person"
+                    class="article__author__img"
+                  />
+                  <span class="article__author__name">Darlene Robertson</span>
+                </div>
+                <h3 class="article__title">
+                  The best way to know the quality of the house we want to buy
+                </h3>
+                <div class="article__time">
+                  <img
+                    src="./images/tips/clock.svg"
+                    alt="clock"
+                    class="article__time__icon"
+                  />
+                  <span class="article__time__details"
+                    >2 min read | 24 Apr 2021</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="article article_big">
+              <div class="article__img__wrapper">
+                <img
+                  src="./images/tips/tip4.png"
+                  alt="apartment"
+                  class="article__img article__img_big"
+                />
+              </div>
+              <div class="article__content">
+                <div class="article__author">
+                  <img
+                    src="./images/tips/person4.png"
+                    alt="person"
+                    class="article__author__img"
+                  />
+                  <span class="article__author__name">Cameron Williamson</span>
+                </div>
+                <h3 class="article__title">
+                  12 Things to know before buying a house
+                </h3>
+                <p class="article__descr">
+                  Want to buy a house but are unsure about what we should know,
+                  here I will try to explain what we should know and check when
+                  we want to buy a house
+                </p>
+                <div class="article__time">
+                  <img
+                    src="./images/tips/clock.svg"
+                    alt="clock"
+                    class="article__time__icon"
+                  />
+                  <span class="article__time__details"
+                    >4 min read | 25 Apr 2021</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="subscribe">
+        <div class="container subscribe__container">
+          <div class="subscribe__content">
+            <h2 class="subscribe__title">
+              Subscribe For More Info and update from Hounter
+            </h2>
+            <div class="input-search-wrapper subscribe__search">
+              <img
+                src="./images/subscribe/mail.svg"
+                alt=""
+                class="input-search__location"
+              />
+              <input
+                type="text"
+                name="search"
+                id="search2"
+                class="input-search hero__search"
+                placeholder="Search for the location you want!"
+              />
+              <button class="input-search__button subscribe__button">
+                Subscribe Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="join">
+        <div class="container join__container">
+          <div class="join__info">
+            <h5 class="join__info__title">Would you like to join?</h5>
+            <div class="join__info__advantages">
+              <p class="join__info__advantage">
+                Quickly get three quotes from these local that people love in
+                online reviews.
+              </p>
+              <p class="join__info__advantage">
+                Pick the whose estimate suits you best.
+              </p>
+              <p class="join__info__advantage">
+                We then make sure the work i done to your complete satisfaction.
+              </p>
+            </div>
+            <div class="join__info__img__wrapper">
+              <img
+                src="./images/join/crash_css.png"
+                alt="crash css"
+                class="join__img"
+              />
+            </div>
+          </div>
+
+          <div class="join__form__wrapper">
+            <form class="form join__form">
+              <div class="form__row">
+                <label for="name">Name :</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Input placeholder"
+                />
+              </div>
+              <div class="form__row">
+                <label for="name">Surname :</label>
+                <input
+                  type="text"
+                  name="surname"
+                  id="surname"
+                  placeholder="Input placeholder"
+                />
+              </div>
+              <div class="form__row">
+                <label for="education"
+                  >Education
+                  <img src="./images/join/QuestionCircle.svg" alt="question" />
+                  :</label
+                >
+                <select name="education" id="education" class="form__select">
+                  <option value="0">None</option>
+                  <option value="1">School</option>
+                  <option value="2">University</option>
+                </select>
+              </div>
+              <div class="form__row">
+                <label for="timing"
+                  >Timing
+                  <img src="./images/join/QuestionCircle.svg" alt="question" />
+                  :</label
+                >
+                <select name="timing" id="timing" class="form__select">
+                  <option style="font-family: Lexend" value="0">
+                    Dropdown
+                  </option>
+                  <option value="1">Timing 1</option>
+                  <option value="2">Timing 2</option>
+                </select>
+              </div>
+              <div class="form__row">
+                <label for="name"
+                  >Expirience
+                  <img src="./images/join/QuestionCircle.svg" alt="question" />
+                  :</label
+                >
+                <textarea
+                  name="textareaneme"
+                  id="textarea1"
+                  cols="30"
+                  rows="10"
+                  placeholder="Input placeholder"
+                ></textarea>
+              </div>
+              <div class="form__confirm">
+                <label for="form__agree" class="form__agree__label">
+                  <input type="checkbox" name="form__agree" id="form__agree" />
+                  <span>
+                    <img src="./images/join/asterisk.svg" alt="important" /> I
+                    give consent to the processing of my personal data given in
+                    the contact form above under the terms and conditions of
+                    Grid Dynamics <a href="">Privacy Policy</a> .
+                  </span>
+                </label>
+                <button class="form__submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__bg"></div>
+      <div class="container footer__container">
+        <div class="footer__about">
+          <a class="header__logo" href="">
+            <img
+              class="header__logo__icon"
+              src="./images/icons/logo.svg"
+              alt="logo"
+            />
+            <h4 class="header__title">Hounter</h4>
+          </a>
+          <p class="footer__descr">
+            We provide information about properties such as houses, villas and
+            apartments to help people find their dream home
+          </p>
+          <div class="footer__socials">
+            <a href="https://facebook.com"
+              ><img src="./images/footer/facebook.svg" alt="facebook"
+            /></a>
+            <a href="https://twitter.com"
+              ><img src="./images/footer/twitter.svg" alt="twitter"
+            /></a>
+            <a href="https://instagram.com"
+              ><img src="./images/footer/instagram.svg" alt="instagram"
+            /></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer__links__col">
+            <h4>Property</h4>
+            <a href="" class="footer__link">House</a>
+            <a href="" class="footer__link">Apartment</a>
+            <a href="" class="footer__link">Villa</a>
+          </div>
+          <div class="footer__links__col">
+            <h4>Article</h4>
+            <a href="" class="footer__link">New Article</a>
+            <a href="" class="footer__link">Popular Article</a>
+            <a href="" class="footer__link">Most Read</a>
+            <a href="" class="footer__link">Tips & Tricks</a>
+          </div>
+          <div class="footer__links__col">
+            <h4>Contact</h4>
+            <a
+              href="https://www.google.com/maps/search/2464+Royal+Ln.+Mesa,+New+Jersey+45463/@32.8957902,-96.8985807,17z/data=!3m1!4b1"
+              class="footer__link"
+              >2464 Royal Ln. Mesa, New Jersey 45463</a
+            >
+            <a href="tel:6715550110" class="footer__link">(671) 555-0110</a>
+            <a href="mailto:info@hounter.com" class="footer__link"
+              >info@hounter.com</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

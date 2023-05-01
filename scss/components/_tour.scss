@@ -1,0 +1,222 @@
+.tour {
+  @include section-settings();
+  margin-top: 120px;
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    top: -200px;
+    right: 0;
+    background: url("../images/tour/gradient.png");
+    background-size: contain;
+    background-position: top 34% right;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 550px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+  }
+
+  &__col {
+    margin-top: 29px;
+  }
+
+  &__info {
+    max-width: 564px;
+    padding-left: 40px;
+  }
+
+  &__descr {
+    margin-top: 16px;
+    @include font-medium-mid();
+    color: $color-grey;
+  }
+
+  &__details {
+    margin-top: 16px;
+    padding-bottom: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+
+    border-bottom: 2px solid #f0f3fd;
+
+    &__title {
+      margin-top: 16px;
+      @include font-semibold-big();
+      line-height: 28px;
+      color: $color-blue-dark;
+    }
+  }
+
+  &__detail {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    @include font-medium-mid();
+    line-height: 20px;
+    text-transform: capitalize;
+    color: $color-blue-neutral;
+
+    &__icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    margin-top: 32px;
+
+    &__img {
+      max-width: 56px;
+      max-height: 56px;
+      border-radius: 50%;
+      margin-right: 24px;
+    }
+
+    &__info {
+      margin-right: 57px;
+    }
+
+    &__name {
+      @include font-medium-big();
+      line-height: 24px;
+      color: $color-obsidian;
+    }
+
+    &__position {
+      margin-top: 4px;
+      @include font-medium-mid();
+      color: $color-grey;
+    }
+
+    &__phone {
+      max-height: 48px;
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+      gap: 16px;
+      background: $color-green;
+      border: 1px solid $color-green;
+      border-radius: 32px;
+
+      @include font-semibold-normal();
+      line-height: 22px;
+      color: $color-white;
+      transition: 0.4s;
+
+      &:hover {
+        background: $color-white;
+        color: $color-green;
+
+        svg > path {
+          fill: $color-green;
+        }
+      }
+    }
+  }
+
+  &__media {
+    position: relative;
+
+    &__bottom {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      gap: 12px;
+      top: -125px;
+      left: -40px;
+
+      img {
+        height: fit-content;
+        max-width: 100%;
+      }
+    }
+
+    img {
+      position: relative;
+      max-width: 100%;
+      transition: 0.4s;
+
+      &:hover {
+        z-index: 10;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 32%;
+      left: 46%;
+      z-index: 20;
+      width: 48px;
+      height: 48px;
+
+      background: url("../images/tour/play.png");
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .tour {
+    &__bg {
+      display: none;
+    }
+
+    &__container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__media {
+      &__bottom {
+        position: absolute;
+        left: 0;
+        bottom: -10%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tour {
+    &__info {
+      padding: 0;
+    }
+
+    &__contact {
+      &__img {
+        max-width: 42px;
+        max-height: 42px;
+        margin-right: 10px;
+      }
+
+      &__info {
+        margin-right: 10px;
+      }
+
+      &__name {
+        font-size: 15px;
+      }
+
+      &__position {
+        font-size: 13px;
+      }
+
+      &__phone {
+        padding: 12px 10px;
+        font-size: 12px;
+        svg {
+          display: none;
+        }
+      }
+    }
+  }
+}

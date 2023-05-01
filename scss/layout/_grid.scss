@@ -1,0 +1,57 @@
+html,
+body {
+  font-family: "Lexend", sans-serif;
+}
+
+body {
+  overflow-anchor: none;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+section,
+header {
+  padding: 0px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.section-title {
+  h6 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: $color-yellow-hot;
+    @include font-medium();
+    line-height: 18px;
+    text-transform: capitalize;
+
+    &::before {
+      content: "";
+      display: block;
+      position: relative;
+      height: 1px;
+      width: 32px;
+      top: 0;
+      left: 0;
+      background: $color-yellow-hot;
+    }
+  }
+
+  h2 {
+    @include font-semibold-bigger();
+    text-transform: capitalize;
+    color: $color-blue-dark;
+    margin-left: 40px;
+  }
+}

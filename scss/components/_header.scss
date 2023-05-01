@@ -1,0 +1,186 @@
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  @include section-settings();
+  z-index: 10;
+  &__container {
+    padding-top: 46px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &__icon {
+      transition: 0.25s;
+    }
+
+    &:hover &__icon {
+      transform: rotate(360deg);
+    }
+  }
+
+  &__title {
+    @include font-bold-small();
+    color: $color-blue-dark;
+  }
+}
+
+.nav {
+  &__burger {
+    width: 20px;
+    height: 20px;
+    display: none;
+
+    span {
+      width: 100%;
+      height: 2px;
+      border-radius: 2px;
+      background: $color-blue-dark;
+    }
+  }
+
+  &__links {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  &__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+
+    position: relative;
+    padding: 8px 16px;
+    max-height: 34px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 32px;
+
+    @include font-semibold-normal();
+    color: $color-white-neutral;
+    transition: 0.4s;
+
+    &:hover {
+      background: $color-white;
+      color: rgba(99, 99, 99, 0.7);
+    }
+  }
+
+  &__sign__up {
+    margin-left: 32px;
+    padding: 12px 24px;
+
+    @include font-semibold-normal();
+    color: $color-green-dark;
+    line-height: 22px;
+
+    background: $color-green-lite;
+    border-radius: 32px;
+    transition: 0.4s;
+
+    &:hover {
+      background: $color-green-dark;
+      color: $color-green-lite;
+    }
+  }
+
+  &__isextendible {
+    position: relative;
+
+    &:hover {
+      .nav__extendible {
+        display: block;
+      }
+    }
+  }
+
+  &__isextendible::after {
+    content: "";
+    position: relative;
+    z-index: 5;
+    height: 6px;
+    width: 11px;
+
+    background: url("../images/icons/arrow-down-white.svg");
+  }
+
+  &__extendible {
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    border-radius: 15px;
+    display: none;
+
+    background: $color-white;
+    color: rgba(99, 99, 99, 0.7);
+
+    ul {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and(max-width:768px) {
+  .header {
+    position: relative;
+    background: #81c2e3;
+    &__container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  .nav {
+    flex-direction: column;
+
+    &__links {
+      display: none;
+    }
+
+    &__burger {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      position: absolute;
+      right: 20px;
+      top: 58px;
+    }
+
+    &__link {
+      width: 100%;
+      justify-content: center;
+    }
+
+    &__burger:hover + &__links {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 20px 0px;
+    }
+
+    &__sign__up {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and(max-width:1200px) {
+  .nav {
+    &__links {
+      gap: 8px;
+      justify-content: space-around;
+    }
+
+    &__sign__up {
+      margin: 0;
+    }
+  }
+}

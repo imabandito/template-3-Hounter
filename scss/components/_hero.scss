@@ -1,0 +1,266 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    gap: 104px;
+  }
+
+  &__gradient {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -2;
+    width: 600px;
+    height: 500px;
+
+    background: radial-gradient(
+      circle at top left,
+      #82f7ff61 0,
+      #82ffd16d 34%,
+      #fff 63%
+    );
+  }
+
+  &__info {
+    margin-top: 182px;
+    max-width: 496px;
+    position: relative;
+  }
+
+  &__title {
+    @include font-semibold-enormous;
+    text-transform: capitalize;
+    color: $color-blue-dark;
+    & span {
+      color: $color-white;
+      text-shadow: 0 0 2px $color-blue-dark, 0 0 2px $color-blue-dark,
+        0 0 2px $color-blue-dark, 0 0 2px $color-blue-dark;
+    }
+  }
+
+  &__descr {
+    margin-top: 24px;
+    @include font-regular();
+    line-height: 28px;
+    color: $color-blue-lite;
+  }
+
+  &__partnership {
+    margin-top: 32px;
+  }
+
+  &__partnership__title {
+    @include font-regular();
+    color: $color-grey;
+  }
+
+  &__partners {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+
+  &__stats__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background: url("../images/hero/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+  }
+
+  &__slider {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    bottom: 38px;
+    left: 48px;
+    max-width: 100%;
+  }
+
+  &__stats {
+    display: block;
+    position: relative;
+
+    width: 100%;
+    display: flex;
+    gap: 16px;
+
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .stat-block:first-child {
+      width: 328px;
+    }
+  }
+}
+
+.input-search-wrapper {
+  margin-top: 32px;
+  display: flex;
+  position: relative;
+
+  .input-search {
+    width: 100%;
+    display: flex;
+    background: $color-white;
+    border: 1px solid $color-white-darker;
+    border-radius: 32px;
+    padding: 17px 0px 17px 64px;
+
+    &::placeholder {
+      @include font-medium();
+      color: $color-grey;
+    }
+  }
+
+  .input-search__location,
+  .input-search__button {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .input-search__location {
+    left: 27px;
+  }
+
+  .input-search__button {
+    display: block;
+    position: absolute;
+    right: 2px;
+    padding: 12px 16px;
+    background: $color-green;
+    border: 1px solid $color-green;
+    border-radius: 32px;
+
+    @include font-semibold-normal();
+    line-height: 22px;
+    color: $color-white;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+    &:hover {
+      background: $color-white;
+      color: $color-green;
+    }
+  }
+}
+
+.stat-block {
+  position: relative;
+  height: fit-content;
+  min-width: fit-content;
+  max-width: 328px;
+  max-height: 114px;
+  padding: 24px;
+
+  display: flex;
+  gap: 16px;
+  background: $color-white;
+  border-radius: 32px;
+
+  cursor: pointer;
+
+  &__photos {
+    display: flex;
+
+    img:not(:first-child) {
+      position: relative;
+      margin-left: -27px;
+    }
+  }
+
+  img {
+    height: fit-content;
+  }
+
+  h5 {
+    @include font-semibold-big();
+    color: $color-blue-dark;
+  }
+
+  p {
+    @include font-regular-small();
+    color: $color-blue-lite;
+  }
+}
+
+@media screen and(max-width:1024px) {
+  .hero {
+    &__stats__wrapper {
+      width: 100%;
+    }
+
+    &__gradient {
+      display: none;
+    }
+
+    &__container {
+      justify-content: center;
+    }
+
+    &__partnership {
+      display: none;
+    }
+
+    &__descr {
+      color: $color-blue-dark;
+    }
+  }
+}
+
+@media screen and(max-width:768px) {
+  .hero {
+    &__stats__wrapper {
+      width: 100%;
+    }
+
+    &__gradient {
+      display: none;
+    }
+
+    &__container {
+      justify-content: center;
+    }
+
+    &__info {
+      margin-top: 80px;
+    }
+  }
+}
+
+@media screen and(max-width:425px) {
+  .input-search-wrapper {
+    .input-search {
+      padding: 17px 0px 17px 35px;
+
+      &::placeholder {
+        @include font-regular-small;
+      }
+
+      &__location {
+        left: 8px;
+      }
+
+      &__button {
+        padding: 12px 9px;
+        font-size: 13px;
+      }
+    }
+  }
+}

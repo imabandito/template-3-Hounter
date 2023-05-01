@@ -1,0 +1,245 @@
+.join {
+  @include section-settings;
+  padding: 78px 0px 74px;
+  margin-top: 79px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1.65fr;
+    gap: 36px;
+  }
+
+  &__info,
+  &__form__wrapper {
+    background: $color-white;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  &__info {
+    padding: 20px 16px 0px 26px;
+    position: relative;
+
+    &__title {
+      @include font-semibold-normal;
+      color: $color-dark;
+      position: relative;
+    }
+
+    &__advantages {
+      margin-top: 20px;
+    }
+
+    &__advantage {
+      position: relative;
+      margin-top: 44px;
+      @include font-medium-mid;
+      line-height: 19px;
+
+      color: $color-dark;
+
+      &:not(:last-child)::after {
+        content: "";
+        position: relative;
+        display: block;
+        top: 21px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width: 40px;
+
+        background: $color-green;
+        border-radius: 4px;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &__img__wrapper {
+      max-width: fit-content;
+      margin: 61px auto 0px;
+    }
+  }
+
+  &__form__wrapper {
+    padding: 38px 37px 24px 41px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 27px;
+
+    label {
+      min-width: 119px;
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      gap: 4px;
+      align-items: center;
+      @include font-regular;
+      line-height: 24px;
+      text-align: right;
+
+      color: $color-black;
+
+      &::before {
+        content: "";
+        position: relative;
+        top: -2px;
+        right: 4px;
+        display: block;
+        background: url("../images/join/asterisk.svg");
+        width: 6px;
+        height: 7px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      max-width: 506px;
+
+      border: 1px solid #434343;
+      border-radius: 2px;
+      padding: 8px 12px;
+
+      &::placeholder,
+      select option {
+        font-family: Lexend;
+        @include font-regular;
+        line-height: 24px;
+        color: #7d7d7d;
+      }
+    }
+  }
+
+  textarea {
+    resize: none;
+    height: 64px;
+  }
+
+  &__select {
+    font-family: Lexend;
+    @include font-regular;
+    line-height: 24px;
+    color: $color-grey-mid;
+  }
+
+  &__confirm {
+    align-self: flex-end;
+  }
+
+  &__agree__label {
+    width: 100%;
+    max-width: 506px;
+    margin-left: 0;
+    display: flex;
+    gap: 8px;
+
+    span {
+      @include font-regular-mid;
+      letter-spacing: 0.02em;
+      color: $color-black;
+
+      a {
+        text-decoration: underline;
+        color: $color-green;
+      }
+    }
+  }
+
+  &__submit {
+    margin-top: 24px;
+    padding: 8px 16px;
+    height: 40px;
+
+    background: $color-green;
+    border: 1px solid $color-green;
+    border-radius: 32px;
+
+    @include font-medium-big;
+    line-height: 0;
+    color: $color-white;
+    transition: 0.4s;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-white;
+      color: $color-green;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  background: $color-white;
+  border: 2px solid rgba(217, 217, 217, 0.5);
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  height: 8px;
+  width: 10px;
+  background: url("../images/join/check.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+input[type="checkbox"]:checked {
+  border-color: $color-green;
+  background: $color-green;
+}
+
+input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+@media screen and(max-width:768px) {
+  .join {
+    &__container {
+      grid-template-columns: 1fr;
+    }
+
+    &__form__wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__info__title {
+      text-align: center;
+    }
+
+    &__info__advantage {
+      text-align: center;
+    }
+  }
+
+  .form {
+    &__row {
+      flex-direction: column;
+    }
+
+    &__confirm {
+      align-self: flex-start;
+    }
+  }
+}

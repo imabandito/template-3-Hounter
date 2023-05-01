@@ -1,0 +1,262 @@
+.featured {
+  @include section-settings();
+  margin-top: 130px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__house__types {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__house__type {
+    padding: 12px 24px;
+    background: $color-white;
+    border: 1px solid $color-white-darker;
+    border-radius: 32px;
+
+    cursor: pointer;
+    transition: 0.4s;
+
+    @include font-medium-big();
+    color: $color-grey;
+
+    svg {
+      margin-right: 8px;
+      max-height: 18px;
+    }
+
+    svg > path {
+      fill: $color-grey;
+    }
+
+    &:hover {
+      border-color: $color-green-lite;
+      background: $color-green-lite;
+      color: $color-green;
+    }
+
+    &:hover svg > path {
+      fill: $color-green;
+    }
+  }
+
+  &_active {
+    border-color: $color-green;
+    background: $color-green;
+    color: $color-white;
+
+    svg > path {
+      fill: $color-white;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    gap: 16px;
+    button {
+      width: 60px;
+      height: 52px;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: $color-green;
+      border: none;
+      border-radius: 32px;
+      transition: 0.4s;
+      cursor: pointer;
+
+      &:hover {
+        background: $color-white;
+        border: 1px solid $color-green;
+
+        svg > path {
+          fill: $color-green;
+        }
+      }
+
+      &:disabled {
+        background: $color-white-darker;
+        svg > path {
+          fill: $color-blue-neutral;
+        }
+      }
+    }
+  }
+
+  &__forward {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__backward {
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__slider {
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    max-width: 1100px;
+  }
+
+  &__houses {
+    margin-top: 40px;
+    display: flex;
+    gap: 40px;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    position: relative;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.house {
+  max-width: 340px;
+
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  transform-origin: center center;
+  transform: scale(1);
+  cursor: pointer;
+
+  &__img__wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+
+    &:hover {
+      .house__img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 24px;
+    transition: 0.4s;
+  }
+
+  &__title {
+    margin-top: 24px;
+    @include font-medium-bigger();
+    color: $color-obsidian;
+    transition: 0.4s;
+
+    &:hover {
+      color: $color-blue-neutral;
+    }
+  }
+
+  &__price {
+    margin-top: 8px;
+    @include font-medium-bigger();
+    font-size: 20px;
+    color: $color-blue-neutral;
+
+    transition: 0.4s;
+
+    &:hover {
+      color: $color-obsidian;
+    }
+  }
+
+  &_popular .house__img__wrapper::before {
+    @include house-category(
+      "../images/icons/popular.svg",
+      "Popular",
+      #ef4444,
+      #fee2e2
+    );
+    z-index: 10;
+  }
+
+  &_new .house__img__wrapper::before {
+    @include house-category(
+      "../images/icons/house-small.svg",
+      "New House",
+      #1d4ed8,
+      #dbeafe
+    );
+    z-index: 10;
+  }
+
+  &_best .house__img__wrapper::before {
+    @include house-category(
+      "../images/icons/best_deals.svg",
+      "Best Deals",
+      #047857,
+      #d1fae5
+    );
+    z-index: 10;
+  }
+}
+
+.customer {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+
+  &__img {
+    max-height: 40px;
+  }
+
+  &__name {
+    @include font-medium-big();
+    line-height: 24px;
+    color: $color-obsidian;
+  }
+
+  &__address {
+    @include font-medium();
+    color: $color-grey;
+  }
+}
+
+@media screen and(max-width:1024px) {
+  .featured {
+    &__header {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    &__slider {
+      max-width: 760px;
+    }
+
+    &__houses {
+      gap: 0;
+    }
+
+    .house {
+      margin: 0px 20px;
+    }
+  }
+}
+
+@media screen and(max-width:768px) {
+  .featured {
+    &__slider {
+      max-width: 380px;
+    }
+
+    &__house__types {
+      flex-direction: column;
+    }
+  }
+}
